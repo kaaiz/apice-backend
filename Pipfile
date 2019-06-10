@@ -11,6 +11,7 @@ django = "==2.2.2"
 pillow = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.7"
