@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # External
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
 
     # Local

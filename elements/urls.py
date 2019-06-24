@@ -1,13 +1,17 @@
 from django.urls import path
-from .views import CategoryList, CategoryDetail, ElementList, ElementDetail, TypeList, TypeDetail, ProductList, ProductDetail
+from . import views
 
 urlpatterns = [
-    path('category/<int:pk>/', CategoryDetail.as_view()),
-    path('category/', CategoryList.as_view()),
-    path('element/<int:pk>/', ElementDetail.as_view()),
-    path('element/', ElementList.as_view()),
-    path('type/<int:pk>/', TypeDetail.as_view()),
-    path('type/', TypeList.as_view()),
-    path('product/<int:pk>/', ProductDetail.as_view()),
-    path('product/', ProductList.as_view()),
+    path('login/', views.Login.as_view(), name="login"),
+    path('change-password/', views.ChangePassword.as_view(), name="change-password"),
+    path('register/', views.Register.as_view(), name="register"),
+    path('logout/', views.Logout.as_view(), name="logout"),
+    path('category/<int:pk>/', views.CategoryDetail.as_view()),
+    path('category/', views.CategoryList.as_view()),
+    path('element/<int:pk>/', views.ElementDetail.as_view()),
+    path('element/', views.ElementList.as_view()),
+    path('type/<int:pk>/', views.TypeDetail.as_view()),
+    path('type/', views.TypeList.as_view()),
+    path('product/<int:pk>/', views.ProductDetail.as_view()),
+    path('product/', views.ProductList.as_view()),
 ]
