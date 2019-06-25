@@ -52,9 +52,9 @@ class ElementSerializer(serializers.ModelSerializer):
 class TypeSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('id', 'title', 'text', 'image', 'created_date',)
-        model = Category
+        model = Type
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('id', 'title', 'text', 'image', 'category', 'display', 'price', 'stock', 'created_date',)
-        model = Element
+        fields = ('id', 'title', 'text', 'image', 'type', 'display', 'price', 'stock', 'created_date',)
+        model = Product
